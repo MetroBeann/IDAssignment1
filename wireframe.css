@@ -353,7 +353,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("C:/Users/casey/OneDrive - Ngee Ann Polytechnic/FED/d4vd draft 1/d4vd images/main page.jpg") no-repeat;
+    background: url("d4vd images/main page.jpg") no-repeat;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -362,7 +362,7 @@
  body{
     font-family: Arial, sans-serif;
     margin: 0;
-    background-image: url("C:/Users/casey/OneDrive - Ngee Ann Polytechnic/FED/d4vd draft 1/d4vd images/background wallpaper.jpg");
+    background-image: url("d4vd images/background\ wallpaper.jpg");
 }
 
 ul {
