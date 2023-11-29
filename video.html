@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="wireframe.css" type="text/css">
+    <script src="responsive.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
     <title>Video</title>
     <style>
 
@@ -23,6 +26,72 @@
         .no-border{
             border: none;
         }
+
+        .newbody{
+        display: flex;
+        padding: 0 35px;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
+
+    .wrapper{
+        max-width: 1200px;
+        position: relative;
+    }
+
+    .wrapper i{
+        top: 50%;
+        transform: translateY(-50%);
+        height: 46px;
+        width: 46px;
+        text-align: center;
+        line-height: 46px;
+        background: white;
+        position: absolute;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .wrapper i:first-child{
+        left: -23px;
+    }
+
+    .wrapper i:last-child{
+        right: -23px;
+    }
+
+    .wrapper .carousel{
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 0px;
+        cursor: pointer;
+        scroll-behavior: smooth;
+    }
+
+    .carousel img{
+        height:340px;
+        object-fit: cover;
+        margin-left: 14px;
+        width: calc(100%/3);
+    }
+
+    .carousel img:first-child{
+        margin-left: 0px;
+    }
+
+    @media screen and (max-width: 900px){
+        .carousel img{
+            width: calc(100% / 2);
+        }
+    }
+
+    @media screen and (max-width: 550px){
+        .carousel img{
+            width: 100%;
+        }
+    }
+
 
     
             
@@ -46,10 +115,22 @@
         <div class="content">
             <br>
             <h1>VIDEO</h1>
-            <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/8XjYw8Wuv6Q?autoplay=1" width="1000" height="605" title="A YouTube video" class="no-border" allowfullscreen></iframe>      
-            </div>
+        </div>
     </div>
+
+    <div class="newbody">
+        <div class="wrapper">
+        <i id ="left" class="fa-solid fa-angle-left"></i>
+        <div class="carousel">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/8XjYw8Wuv6Q?autoplay=1" width="1000" height="605" title="A YouTube video" class="no-border" allowfullscreen></iframe>      
+            <iframe width="1000" height="605" src="https://www.youtube.com/embed/FpO31FVxxb4?si=zopHymcUfNHPaTdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        </div>
+
+        <i id ="right" class="fa-solid fa-angle-right"></i>
+        </div>
+    
 
 </body>
 </html>
