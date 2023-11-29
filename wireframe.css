@@ -413,6 +413,10 @@ background-color: #04AA6D;
     cursor: pointer;
 }
 
+.button a {
+  text-decoration: none;
+}
+
 .button:hover {
   background-color: #45a049 ;
 }

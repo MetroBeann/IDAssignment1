@@ -3,58 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="wireframe.css" type="text/css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="responsive.js" defer></script>
     <title>Music</title>
     <style>
 
-        .container {
-            margin-top: 100px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    .container {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-        p{
-            font-size: 20px;
-            
-        }
+    p{
+        font-size: 20px;    
+    }
 
 
-        .box {
-            width: 400px;
-            height: 400px;
-            background-color: black;
-            margin: 30px;
-            float: left;
-            position: relative;
-            
-        }
-
-        .arrow {
-            position: absolute;
-            height: 40px;
-            width: 40px;
-            border-top: 8px solid black;
-            border-left: 8px solid black;
-            border-right: transparent;
-            border-bottom: transparent;
-            background-color: transparent;
-            transform: rotate(45deg);
-            top: 50%;
-           
-        }
-
-        .previous{
-            left: -50px;
-            transform: rotate(-45deg);
-        }
+    .box {
+        width: 400px;
+        height: 400px;
+        background-color: black;
+        margin: 30px;
+        float: left;
+        position: relative;
         
-        .next {
-            right: -50px;
-            transform: rotate(135deg);
+    }
+
+    .newbody{
+        display: flex;
+        padding: 0 35px;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+    }
+
+    .wrapper{
+        max-width: 1200px;
+        position: relative;
+    }
+
+    .wrapper i{
+        top: 50%;
+        transform: translateY(-50%);
+        height: 46px;
+        width: 46px;
+        text-align: center;
+        line-height: 46px;
+        background: white;
+        position: absolute;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .wrapper i:first-child{
+        left: -23px;
+    }
+
+    .wrapper i:last-child{
+        right: -23px;
+    }
+
+    .wrapper .carousel{
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 0px;
+        cursor: pointer;
+        scroll-behavior: smooth;
+    }
+
+    .carousel img{
+        height:340px;
+        object-fit: cover;
+        margin-left: 14px;
+        width: calc(100%/3);
+    }
+
+    .carousel img:first-child{
+        margin-left: 0px;
+    }
+
+    @media screen and (max-width: 900px){
+        .carousel img{
+            width: calc(100% / 2);
         }
+    }
+
+    @media screen and (max-width: 550px){
+        .carousel img{
+            width: 100%;
+        }
+    }
+
+
+   
     </style>
 </head>
 <body>
@@ -71,44 +115,25 @@
         <li><a href="signup.html">SIGN UP</a></li>
       </ul>
     
-
-      <div class="music">
         <div class="content">
           <br>
           <h1>MUSIC</h1>
-          <div class="container">
-            
-        
-        <div class="box">
-            <button class="arrow previous"></button>
-            <img src="d4vd images/herewithme.jpg"  width="400" height="400">
-            <P>HERE WITH ME</P>
-            <button class="button">
-                <a href="https://www.youtube.com/watch?v=B7Y4LHbpXv0" target="_blank">STREAM NOW</a>
-            </button>
         </div>
-        
-        <div class="box">
-            <img src="d4vd images/sleepwell.jpg"  width="400" height="400">
-            <P>SLEEP WELL</P>
-            <button class="button">
-                <a href="https://youtu.be/iTWYa0t5COk?si=cNOsXJLHukx051fk" target="_blank">STREAM NOW</a>
-            </button>
-            </button>
-        </div>
-        <div class="box">
-            <img src="d4vd images/romantichomicide.png"  width="400" height="400">
-            <P>ROMANTIC HOMICIDE</P>
-            <button class="button">
-                <a href="https://youtu.be/eKL3TceSxvk?si=wowvM0VpAxpIIAQI" target="_blank">STREAM NOW</a>
-            </button>
-            <button class="arrow next"></button>
 
-                </div>
+        <div class="newbody">
+            <div class="wrapper">
+            <i id ="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                <img src="d4vd images/herewithme.jpg"  alt="here with me">
+                <img src="d4vd images/sleepwell.jpg"  alt="sleep well">
+                <img src="d4vd images/romantichomicide.png"  alt="romantic homicide">
+                <img src="d4vd images/poeticvulgarity.jpg"  alt="poetic vulgarity">
+                <img src="d4vd images/main page.jpg"  alt="placebo effect">
+                <img src="d4vd images/worthless.jpg"  alt="worthless">
             </div>
+            <i id ="right" class="fa-solid fa-angle-right"></i>
         </div>
     </div>
-
+        
 </body>
 </html>
-    
