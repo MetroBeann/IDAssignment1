@@ -14,13 +14,14 @@
         }
 
         .video-container{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        margin-top: 30px;
-        margin-bottom: 80px;
-        align-items: flex-start;
-        justify-content: center;
+            position: sticky;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin-top: 30px;
+            margin-bottom: 80px;
+            align-items: flex-start;
+            justify-content: center;
         }
 
         .no-border{
@@ -36,7 +37,8 @@
     }
 
     .wrapper{
-        max-width: 1200px;
+        max-width: 1000px;
+        max-height: 605px;
         position: relative;
     }
 
@@ -69,14 +71,14 @@
         scroll-behavior: smooth;
     }
 
-    .carousel img{
+    .carousel iframe{
         height:340px;
         object-fit: cover;
         margin-left: 14px;
         width: calc(100%/3);
     }
 
-    .carousel img:first-child{
+    .carousel iframe:first-child{
         margin-left: 0px;
     }
 
@@ -92,6 +94,14 @@
         }
     }
 
+   iframe{
+    border: none;
+   }
+
+   .left, .right {
+    position: relative;
+    z-index: 70;
+   }
 
     
             
@@ -120,17 +130,75 @@
 
     <div class="newbody">
         <div class="wrapper">
-        <i id ="left" class="fa-solid fa-angle-left"></i>
-        <div class="carousel">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/8XjYw8Wuv6Q?autoplay=1" width="1000" height="605" title="A YouTube video" class="no-border" allowfullscreen></iframe>      
-            <iframe width="1000" height="605" src="https://www.youtube.com/embed/FpO31FVxxb4?si=zopHymcUfNHPaTdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+        <div class="vidcarousel">
+            <i id ="left" class="fa-solid fa-angle-left" style="z-index: 90;"></i>
+            <iframe src="d4vd images/Here With Me Short.mp4" width="1000" height="605"></iframe>
+            <iframe src="d4vd images/Romantic Homicide Short.mp4" width="1000" height="605"></iframe>
+            <iframe src="d4vd images/Sleep Well Short.mp4" width="1000" height="605"></iframe>
         </div>
 
-        <i id ="right" class="fa-solid fa-angle-right"></i>
+        <i id ="right" class="fa-solid fa-angle-right" style="z-index: 90;"></i>
         </div>
-    
+
+    <script>
+        const vidcarousel = document.querySelector(".vidcarousel");
+        const leftIcon = document.getElementById('left');
+        const rightIcon = document.getElementById("right");
+ 
+        const iframes = vidcarousel.querySelectorAll("iframe");
+        
+        let currentIframe = null;
+        let currentIndex = 0;
+
+        function playNextVideo() {
+            if (currentIframe) {
+                currentIframe.contentWindow.postMessage('{"event": "command", "func": "' + "stopVideo" + '", "args": ""}', '*')
+            }
+
+            for(const iframe of iframes){
+                iframe.style.display =  'none';
+            }
+
+            currentIndex++;
+
+            if (currentIndex >= iframes.length){
+                currentIndex = 0;
+            }
+
+            const nextIframe = iframes[currentIndex];
+            nextIframe.style.display = "block";
+            nextIframe.setAttribute("src", nextIframe.getAttribute("src") + "?autoplay=1");
+
+            currentIframe = nextIframe;
+        }
+
+        function playPreviousVideo(){
+            if (currentIframe) {
+                currentIframe.contentWindow.postMessage('{"event": "command", "func": "' + "stopVideo" + '", "args": ""}', '*')
+            }
+
+            for(const iframe of iframes){
+                iframe.style.display =  'none';
+            }
+
+            currentIndex--;
+
+            if (currentIndex < 0){
+                currentIndex = iframes.length - 1;
+            }
+
+            const prevIframe = iframes[currentIndex];
+            prevIframe.style.display = "block";
+            prevIframe.setAttribute("src", prevIframe.getAttribute("src") + "?autoplay=1");
+            
+            currentIframe = iframes[currentIndex];
+        }
+
+        leftIcon.addEventListener("click", playPreviousVideo);
+        rightIcon.addEventListener("click", playNextVideo);
+
+    </script>
+
 
 </body>
 </html>
