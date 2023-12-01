@@ -18,33 +18,29 @@ arrowIcons.forEach(icon=> {
     } );
 });
 
-//Background Music
-const videoIDs = {
-    HW : "https://youtu.be/B7Y4LHbpXv0?si=_pbjpSexTeg28QUl",
-    SW : "ID2",
-    RH : "ID3",
-    PV : "ID4",
-    PE : "ID5",
-    Worthless : "ID6"
-}
 
-function playVideo(videoID){
-    const player = new YT.Player("Player",  {
-        height: "360",
-        width: "640",
-        videoID: videoID,
-        events: {
-            "OnReady" : function(event){
-                event.target.playVideo();
-            }
-        }
+//MUSIC JS
+var songs = {
+    "HWM": document.getElementById("song1"),
+    "SW": document.getElementById("song2"),
+    "RH": document.getElementById("song3"),
+    "PV": document.getElementById("song4"),
+    "PE": document.getElementById("song5"),
+    "Worthless": document.getElementById("song6"),
+    };
+
+    var image = document.querySelectorAll(".carousel img");
+    
+    image.forEach(function (image) {
+        image.addEventListener("click", function(){
+            var songId = this.id;
+            var song = songs[songId];
+
+            Object.values(songs).forEach(function (s){
+                s.pause();
+            });
+            song.play();
+        })
     })
-}
 
-document.getElementById('HW').addEventListener("click", function(){
-    playVideo(videoIDs["HW"])
-});
 
-document.getElementById('SW').addEventListener("click", function(){
-    playVideo(videoIDs["SW"])
-});
