@@ -101,6 +101,8 @@
 
 
    
+
+   
     </style>
 </head>
 <body>
@@ -128,21 +130,21 @@
             <div class="carousel">
                 <img id = "HWM" src="d4vd images/herewithme.jpg"  alt="here with me">
                 <audio id="song1"> <source src="d4vd images/d4vd - Here With Me.mp3" type="audio/mp3"></audio>
-                
-                <img id = "SW"src="d4vd images/sleepwell.jpg"  alt="sleep well">
-                <audio id="song2"> <source src="d4vd images/d4vd - Sleep Well.mp3.mp3" type="audio/mp3"></audio>
 
-                <img id = "RH"src="d4vd images/romantichomicide.png"  alt="romantic homicide">
-                <audio id="song3"> <source src="d4vd images/d4vd - Romantic Homicide.mp3.mp3" type="audio/mp3"></audio>
-                
-                <img id = "PV"src="d4vd images/poeticvulgarity.jpg"  alt="poetic vulgarity">
-                <audio id="song4"> <source src="d4vd images/d4vd - Poetic Vulgarity.mp3.mp3" type="audio/mp3"></audio>
-                
-                <img id = "PE"src="d4vd images/main page.jpg"  alt="placebo effect">
-                <audio id="song5"> <source src="d4vd images/d4vd - Placebo Effect.mp3.mp3" type="audio/mp3"></audio>
+                <img id = "SW" src="d4vd images/sleepwell.jpg"  alt="sleep well">
+                <audio id="song2"> <source src="d4vd images/d4vd - Sleep Well.mp3" type="audio/mp3"></audio>
 
-                <img id = "Worthless"src="d4vd images/worthless.jpg"  alt="worthless">
-                <audio id="song6"> <source src="d4vd images/d4vd - WORTHLESS.mp3.mp3" type="audio/mp3"></audio>
+                <img id = "RH" src="d4vd images/romantichomicide.png"  alt="romantic homicide">
+                <audio id="song3"> <source src="d4vd images/d4vd - Romantic Homicide.mp3" type="audio/mp3"></audio>
+                
+                <img id = "PV" src="d4vd images/poeticvulgarity.jpg"  alt="poetic vulgarity">
+                <audio id="song4"> <source src="d4vd images/d4vd - Poetic Vulgarity.mp3" type="audio/mp3"></audio>
+                
+                <img id = "PE" src="d4vd images/main page.jpg"  alt="placebo effect">
+                <audio id="song5"> <source src="d4vd images/d4vd - Placebo Effect.mp3" type="audio/mp3"></audio>
+
+                <img id = "Worthless" src="d4vd images/worthless.jpg"  alt="worthless">
+                <audio id="song6"> <source src="d4vd images/d4vd - WORTHLESS.mp3" type="audio/mp3"></audio>
 
             </div>
             <i id ="right" class="fa-solid fa-angle-right"></i>
@@ -151,6 +153,7 @@
 
     
     <script>
+       
         var songs = {
         "HWM": document.getElementById("song1"),
         "SW": document.getElementById("song2"),
@@ -161,7 +164,7 @@
         };
 
         var image = document.querySelectorAll(".carousel img");
-
+        
         image.forEach(function (image) {
             image.addEventListener("click", function(){
                 var songId = this.id;
