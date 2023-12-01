@@ -7,105 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
     <title>Video</title>
-    <style>
-
-        .video {
-            margin-top: 70px;
-        }
-
-        .video-container{
-            position: sticky;
-            display: flex;
-            width: 100%;
-            height: 100%;
-            margin-top: 30px;
-            margin-bottom: 80px;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .no-border{
-            border: none;
-        }
-
-        .newbody{
-        display: flex;
-        padding: 0 35px;
-        align-items: center;
-        justify-content: center;
-        min-height: 80vh;
-    }
-
-    .wrapper{
-        max-width: 1000px;
-        max-height: 605px;
-        position: relative;
-    }
-
-    .wrapper i{
-        top: 50%;
-        transform: translateY(-50%);
-        height: 46px;
-        width: 46px;
-        text-align: center;
-        line-height: 46px;
-        background: white;
-        position: absolute;
-        cursor: pointer;
-        border-radius: 50%;
-    }
-
-    .wrapper i:first-child{
-        left: -23px;
-    }
-
-    .wrapper i:last-child{
-        right: -23px;
-    }
-
-    .wrapper .carousel{
-        white-space: nowrap;
-        overflow: hidden;
-        font-size: 0px;
-        cursor: pointer;
-        scroll-behavior: smooth;
-    }
-
-    .carousel iframe{
-        height:340px;
-        object-fit: cover;
-        margin-left: 14px;
-        width: calc(100%/3);
-    }
-
-    .carousel iframe:first-child{
-        margin-left: 0px;
-    }
-
-    @media screen and (max-width: 900px){
-        .carousel img{
-            width: calc(100% / 2);
-        }
-    }
-
-    @media screen and (max-width: 550px){
-        .carousel img{
-            width: 100%;
-        }
-    }
-
-   iframe{
-    border: none;
-   }
-
-   .left, .right {
-    position: relative;
-    z-index: 70;
-   }
-
     
-            
-    </style>
 </head>
 <body>
        
@@ -141,6 +43,7 @@
         </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
         const vidcarousel = document.querySelector(".vidcarousel");
         const leftIcon = document.getElementById('left');
         const rightIcon = document.getElementById("right");
@@ -149,6 +52,7 @@
         
         let currentIframe = null;
         let currentIndex = 0;
+        
 
         function playNextVideo() {
             if (currentIframe) {
@@ -196,7 +100,7 @@
 
         leftIcon.addEventListener("click", playPreviousVideo);
         rightIcon.addEventListener("click", playNextVideo);
-
+    });
     </script>
 
 
