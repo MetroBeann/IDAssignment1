@@ -5,105 +5,9 @@
     <link rel="stylesheet" href="wireframe.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="responsive.js" defer></script>
-    <script src="https://youtu.be/B7Y4LHbpXv0?si=_pbjpSexTeg28QUl"></script>
     
     <title>Music</title>
-    <style>
-
-    .container {
-        margin-top: 100px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    p{
-        font-size: 20px;    
-    }
-
-
-    .box {
-        width: 400px;
-        height: 400px;
-        background-color: black;
-        margin: 30px;
-        float: left;
-        position: relative;
-        
-    }
-
-    .newbody{
-        display: flex;
-        padding: 0 35px;
-        align-items: center;
-        justify-content: center;
-        min-height: 80vh;
-    }
-
-    .wrapper{
-        max-width: 1200px;
-        position: relative;
-    }
-
-    .wrapper i{
-        top: 50%;
-        transform: translateY(-50%);
-        height: 46px;
-        width: 46px;
-        text-align: center;
-        line-height: 46px;
-        background: white;
-        position: absolute;
-        cursor: pointer;
-        border-radius: 50%;
-    }
-
-    .wrapper i:first-child{
-        left: -23px;
-    }
-
-    .wrapper i:last-child{
-        right: -23px;
-    }
-
-    .wrapper .carousel{
-        white-space: nowrap;
-        overflow: hidden;
-        font-size: 0px;
-        cursor: pointer;
-        scroll-behavior: smooth;
-    }
-
-    .carousel img{
-        height:340px;
-        object-fit: cover;
-        margin-left: 14px;
-        width: calc(100%/3);
-    }
-
-    .carousel img:first-child{
-        margin-left: 0px;
-    }
-
-    @media screen and (max-width: 900px){
-        .carousel img{
-            width: calc(100% / 2);
-        }
-    }
-
-    @media screen and (max-width: 550px){
-        .carousel img{
-            width: 100%;
-        }
-    }
-
-
-   
-
-   
-    </style>
+    
 </head>
 <body>
 
@@ -128,6 +32,7 @@
             <div class="wrapper">
             <i id ="left" class="fa-solid fa-angle-left"></i>
             <div class="carousel">
+                
                 <img id = "HWM" src="d4vd images/herewithme.jpg"  alt="here with me">
                 <audio id="song1"> <source src="d4vd images/d4vd - Here With Me.mp3" type="audio/mp3"></audio>
 
@@ -151,33 +56,8 @@
         </div>
     </div>
 
-    
-    <script>
-       
-        var songs = {
-        "HWM": document.getElementById("song1"),
-        "SW": document.getElementById("song2"),
-        "RH": document.getElementById("song3"),
-        "PV": document.getElementById("song4"),
-        "PE": document.getElementById("song5"),
-        "Worthless": document.getElementById("song6"),
-        };
-
-        var image = document.querySelectorAll(".carousel img");
-        
-        image.forEach(function (image) {
-            image.addEventListener("click", function(){
-                var songId = this.id;
-                var song = songs[songId];
-
-                Object.values(songs).forEach(function (s){
-                    s.pause();
-                });
-                song.play();
-            })
-        })
-    </script>
-        
+ 
         
 </body>
 </html>
+
