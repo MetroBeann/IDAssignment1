@@ -3,7 +3,8 @@ const carousel = document.querySelector(".carousel");
 firstImg = carousel.querySelectorAll("img")[0];
 arrowIcons = document.querySelectorAll(".wrapper i");
 
-let isDragStart = false, prevPageX, prevScrollLeft;
+let isDragStart = false;
+let prevPageX, prevScrollLeft;
 let firstImgWidth = firstImg.clientWidth + 14;
 
 arrowIcons.forEach(icon=> {
@@ -19,12 +20,12 @@ arrowIcons.forEach(icon=> {
 
 //Background Music
 const videoIDs = {
-    "HW" : "https://youtu.be/B7Y4LHbpXv0?si=_pbjpSexTeg28QUl",
-    "SW" : "ID2",
-    "RH" : "ID3",
-    "PV" : "ID4",
-    "PE" : "ID5",
-    "Worthless" : "ID6"
+    HW : "https://youtu.be/B7Y4LHbpXv0?si=_pbjpSexTeg28QUl",
+    SW : "ID2",
+    RH : "ID3",
+    PV : "ID4",
+    PE : "ID5",
+    Worthless : "ID6"
 }
 
 function playVideo(videoID){
@@ -45,6 +46,5 @@ document.getElementById('HW').addEventListener("click", function(){
 });
 
 document.getElementById('SW').addEventListener("click", function(){
-    playVideo(videoIDs["Sw"])
+    playVideo(videoIDs["SW"])
 });
-
