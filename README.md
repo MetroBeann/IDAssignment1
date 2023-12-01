@@ -28,6 +28,14 @@ https://www.d4vd.io/files/2023/03/680328_worthless-png-converted-compressed.jpg
 
 https://i.ytimg.com/vi/voX178mxthI/maxresdefault.jpg
 
+Music URL:
+Worthless: https://youtu.be/ASubGNey2-4?si=SQ23ZsZy1YHe71na
+Here With me: https://youtu.be/B7Y4LHbpXv0?si=nV4W7vmVFOYgAoXP
+Poetic Vulgarity: https://youtu.be/voX178mxthI?si=UHgFUz9hBsh_n1sE
+Placebo effect: https://youtu.be/sVATBuwBIzo?si=9EG84HG7l3TG-GaX
+Romantic Homicide: https://youtu.be/FpO31FVxxb4?si=z9gOz6PWYX6SyFTq
+Sleep Well: https://youtu.be/iTWYa0t5COk?si=iun0o7e14X_v_XYJ
+
 merch.html-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 https://shop.d4vd.io/cdn/shop/files/2nd1000X1000IMG_4702-Editcopy2cropped_774x.png?v=1700524468
 https://shop.d4vd.io/cdn/shop/products/PRODUCT_D4VD_ECOM_2023_4LOGO_BLACKBEANIE_4_774x.png?v=1700505901
