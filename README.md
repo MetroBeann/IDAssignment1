@@ -1,5 +1,9 @@
+# GITHUB LINK:
+https://github.com/MetroBeann/IDAssignment1.git
+
 # D4VD
 David Anthony Burke (born March 28, 2005), known professionally as d4vd (pronounced David),[5] is an American singer and songwriter. He is best known for his songs "Romantic Homicide" and "Here With Me", both of which experienced international chart success.
+
 
 ## DESIGN PROCESS:
 I've been looking for a musician with outstanding musical abilities but no professional website presence. When I saw d4vd's website, I noticed that it lacked visual appeal in comparison to others, causing me to contemplate designing a basic and minimalistic website that would better correspond with his artistic persona. As a result, I set out to create a website that represents this goal. I used several JavaScript features to improve the interactivity of the music and videos, with the goal of providing users with an immersive experience similar to a curated playlist. In addition, I gathered a variety of items to highlight d4vd's creations. Finally, I feel I have effectively realised the initial concept of the webpage, which I created.
