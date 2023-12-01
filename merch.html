@@ -8,20 +8,61 @@
 
         .merch-container{
         display:grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(4, 0.2fr);
         justify-content: center;
-        margin-top: 20px;
+        margin: 60px;
         }
 
         .merchimg{ 
-                padding: 50px;
+                padding: 20px;
         }
 
         .merchimg img{
                 width: 100%;
                 height: auto;
-            }
+        }
+    
+        .card {
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            height: 560px;
+            position: relative;
+        }
+
+        .price{
+            color: mintcream;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: black;
+            background-color: 000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            position: absolute;
+            bottom: 10px;
+            left:50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+
+        h1{
+            color: mintcream;
+            font-size: 30px;
+        }
 
 
             
@@ -43,46 +84,79 @@
       </ul>
 
 
-        <div class="merch">
-            <div class="content">
-                <br>
-                <h1>MERCH</h1>
-                <div class="merch-container">
-                    <div class="merchimg">
-                        <img src="d4vd images/merch1.webp">
-                    </div>
+        
+    <div class="content">
+        <br>
+        <h1>MERCH</h1>
+    </div>
 
-                    <div class="merchimg">
-                        <img src="d4vd images/merch2.webp">
-                    </div>
-
-                    <div class="merchimg">
-                        <img src="d4vd images/merch3.webp">
-                    </div>
-
-                    <div class="merchimg">
-                        <img src="d4vd images/merch4.webp">
-                    </div>
-
-                    <div class="merchimg">
-                        <img src="d4vd images/merch5.webp">
-                    </div>
-
-                    <div class="merchimg">
-                        <img src="d4vd images/merch6.webp">
-                    </div>
-
-                    <div class="merchimg">
-                        <img src="d4vd images/merch7.webp">
-                    </div>
-
-                    <div class="merchimg">
-                        <img src="d4vd images/merch8.webp">
-                    </div>
-
-
-                </div>
+    <div class="merch-container">
+        <div class="card">
+            <img src="d4vd images/merch1.webp" alt="Lullaby Hoodie" style="width: 100%;">
+            <h1>Lullaby Hoodie</h1>
+            <p class="price"> $89.00 </p>
+            <p><button>Add To Cart</button></p>
         </div>
+
+        <div class="card">
+            <img src="d4vd images/merch2.webp" alt="Logo Black Beanie" style="width: 100%;">
+            <h1>Logo Black Beanie</h1>
+            <p class="price"> $48.00 </p>
+            <p><button>Add To Cart</button></p>
+        </div>
+
+        <div class="card">
+            <img src="d4vd images/merch3.webp" alt="Lullaby Sweatpants" style="width: 100%;">
+            <h1>Lullaby Sweatpants</h1>
+            <p class="price"> $95.00 </p>
+            <p><button>Add To Cart</button></p>
+        </div>
+
+        <div class="card">
+            <img src="d4vd images/merch4.webp" alt="Three Pack Sock Set" style="width: 100%;">
+            <h1>Three Pack Sock Set</h1>
+            <p class="price"> $48.00 </p>
+            <p><button>Add To Cart</button></p>
+        </div>
+    </div>
+
+    <div class="merch-container">
+        <div class="card">
+            <img src="d4vd images/merch5.webp" alt="IT4MI Hoodie" style="width: 100%;">
+            <h1>IT4MI Hoodie</h1>
+            <p class="price"> $89.00 </p>
+            <p><button>Add To Cart</button></p>
+        </div>
+
+        <div class="card">
+            <img src="d4vd images/merch6.webp" alt="IT4MI T-Shirt" style="width: 100%;">
+            <h1>IT4MI T-Shirt</h1>
+            <p class="price"> $48.00 </p>
+            <p><button>Add To Cart</button></p>
+        </div>
+
+        <div class="card">
+            <img src="d4vd images/merch7.webp" alt="Petals To Thorn Long Sleeve T-Shirt" style="width: 100%;">
+            <h1>Petals To Thorn Long Sleeve T-Shirt</h1>
+            <p class="price"> $89.00 </p>
+            <p><button>Add To Cart</button></p>
+        </div>
+
+        <div class="card">
+            <img src="d4vd images/merch8.webp" alt="Petals To Thorns Tour Hoodie" style="width: 100%;">
+            <h1>Petals To Thorns Tour Hoodie</h1>
+            <p class="price"> $75.00 </p>
+            <p><button>Add To Cart</button></p>
+        </div>
+    </div>
+
+
+        
+</body>
+</html>
+
+
+
 </body>
 </html>
 
