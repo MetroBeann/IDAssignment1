@@ -349,6 +349,7 @@
   }
 
   /** PERSONAL CSS ----------------------------------------------------------------------------------------------------------------------------------*/
+  /* NAV BAR */
   .home{
     display: flex;
     justify-content: center;
@@ -421,3 +422,285 @@ background-color: #04AA6D;
 .button:hover {
   background-color: #45a049 ;
 }
+
+/* MUSIC HTML */
+.container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+p{
+  font-size: 20px;    
+}
+
+
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  margin: 30px;
+  float: left;
+  position: relative;
+  
+}
+
+.newbody{
+  display: flex;
+  padding: 0 35px;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.wrapper{
+  max-width: 1200px;
+  position: relative;
+}
+
+.wrapper i{
+  top: 50%;
+  transform: translateY(-50%);
+  height: 46px;
+  width: 46px;
+  text-align: center;
+  line-height: 46px;
+  background: white;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.wrapper i:first-child{
+  left: -23px;
+}
+
+.wrapper i:last-child{
+  right: -23px;
+}
+
+.wrapper .carousel{
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+.carousel img{
+  height:340px;
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100%/3);
+}
+
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px){
+  .carousel img{
+      width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px){
+  .carousel img{
+      width: 100%;
+ }
+}
+
+/* MERCH HTML */
+.merch-container{
+  display:grid;
+  grid-template-columns: repeat(4, 0.3fr);
+  justify-content: center;
+  margin: 60px;
+  }
+
+  .merchimg{ 
+          padding: 20px;
+  }
+
+  .merchimg img{
+          width: 100%;
+          height: auto;
+  }
+
+  .card {
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+      height: 560px;
+      position: relative;
+  }
+
+  .price{
+      color: mintcream;
+      font-size: 22px;
+  }
+
+  .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: black;
+      background-color: 000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      position: absolute;
+      bottom: 10px;
+      left:50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      
+  }
+
+  .card button:hover {
+      opacity: 0.7;
+  }
+
+  h1{
+      color: mintcream;
+      font-size: 30px;
+  }
+
+  /* VIDEO HTML */
+
+  .video {
+    margin-top: 70px;
+}
+
+.video-container{
+    position: sticky;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.no-border{
+    border: none;
+}
+
+.newbody{
+display: flex;
+padding: 0 35px;
+align-items: center;
+justify-content: center;
+min-height: 605px;
+overflow-y: hidden;
+margin-top: 60px;
+}
+
+.wrapper{
+max-width: 1000px;
+max-height: 605px;
+position: relative;
+}
+
+.wrapper i{
+top: 50%;
+transform: translateY(-50%);
+height: 46px;
+width: 46px;
+text-align: center;
+line-height: 46px;
+background: white;
+position: absolute;
+cursor: pointer;
+border-radius: 50%;
+}
+
+.wrapper i:first-child{
+left: -23px;
+}
+
+.wrapper i:last-child{
+right: -23px;
+}
+
+.wrapper .carousel{
+white-space: nowrap;
+overflow: hidden;
+font-size: 0px;
+cursor: pointer;
+scroll-behavior: smooth;
+}
+
+.carousel iframe{
+height:340px;
+object-fit: cover;
+margin-left: 14px;
+width: calc(100%/3);
+}
+
+.carousel iframe:first-child{
+margin-left: 0px;
+}
+
+@media screen and (max-width: 900px){
+.carousel img{
+    width: calc(100% / 2);
+}
+}
+
+@media screen and (max-width: 550px){
+.carousel img{
+    width: 100%;
+}
+}
+
+iframe{
+border: none;
+}
+
+.left, .right {
+position: relative;
+z-index: 70;
+}
+
+
+
+  /* SIGN UP HTML */
+  .subscribe {
+    margin-top: 15%;
+}
+
+.subscribe-container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.subscribe-container input[type="text"],
+.subscribe-container input[type="email"],
+.subscribe-container input[type="submit"] {
+width: 100%;
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.subscribe-container input[type="submit"]{
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.subscribe-container input[type="submit"]:hover {
+    background-color: #45a049 ;
+}
+
