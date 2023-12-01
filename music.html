@@ -151,12 +151,24 @@
 
     
     <script>
-        var song = document.getElementById("song1");
-        var image = document.getElementById("HWM");
+        var songs = {
+        "HWM": document.getElementById("song1"),
+        "SW": document.getElementById("song2"),
+        "RH": document.getElementById("song3"),
+        "PV": document.getElementById("song4"),
+        "PE": document.getElementById("song5"),
+        "Worthless": document.getElementById("song6"),
+        };
 
-        image.onclick = function(){
-           song.play(); 
-        }
+        var image = document.querySelectorAll(".carousel img");
+
+        image.forEach(function (image) {
+            image.addEventListener("click", function(){
+                var songId = this.id;
+                var song = songs[songId];
+                song.play();
+            })
+        })
     </script>
         
         
