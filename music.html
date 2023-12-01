@@ -166,6 +166,10 @@
             image.addEventListener("click", function(){
                 var songId = this.id;
                 var song = songs[songId];
+
+                Object.values(songs).forEach(function (s){
+                    s.pause();
+                });
                 song.play();
             })
         })
